@@ -18,6 +18,6 @@ button.onclick = function(){
   };
   
   //render the value to the website
-  request.open('GET','http://pinakinathc.imad.hasura-app.io/', true);
+  request.open('GET','http://pinakinathc.imad.hasura-app.io/counter', true);
   request.send(null);
 };

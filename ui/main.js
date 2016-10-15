@@ -1,7 +1,6 @@
 //counter code
 
 var button = document.getElementById('counter');
-var counter = 0;
 
 button.onclick = function(){
   //make a request to the counter endpoint
@@ -11,7 +10,9 @@ button.onclick = function(){
   request.onreadystatechange = function(){
       if (request.readyState === XMLHttpRequest.DONE){
           if (request.status === 200){
-              var counter = request.requestText;
+              var counter = request.responseText;
+              var span=document.getElementById('count');
+              span.innerHTML = counter.toString();
           }
       }
   };

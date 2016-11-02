@@ -21,3 +21,27 @@ button.onclick = function(){
 	var select = document.getElementById('count');
 	select.innerHTML = counter.toString();
 };
+
+var button1 = document.getElementById('counter1');
+
+button1.onclick = function(){
+	//create a request object
+	var request = new XMLHttpRequest();
+
+	//capture the request and store it in a variable
+	request.onreadystatechange = function (){
+		if (request.readyState === XMLHttpRequest.DONE){
+			//taking action here
+			if (request.status === 200){
+				var counter1 = request.responseText;
+				var span = document.getElementById('count1');
+				span.innerHTML = counter1.toString();
+			}
+		}
+		//Request not done yet
+	};
+
+	//make the request
+	request.open('GET','http://127.0.0.1:8080/counter',true);
+	request.send(null);
+};

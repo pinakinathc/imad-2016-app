@@ -42,7 +42,7 @@ button1.onclick = function(){
 	};
 
 	//make the request
-	request.open('GET','http://pinakinathc.imad.hasura-app.io/counter',true);
+	request.open('GET','http://127.0.0.1:8080/counter',true);
 	request.send(null);
 };
 
@@ -75,6 +75,6 @@ submit.onclick = function(){
 	var nameInput = document.getElementById('name');
 	var name = nameInput.value;
 
-	request1.open('GET','http://pinakinathc.imad.hasura-app.io/submit-name?q=' + name, true);
+	request1.open('GET','http://127.0.0.1:8080/submit-name?q=' + name, true);
 	request1.send(null);
 };

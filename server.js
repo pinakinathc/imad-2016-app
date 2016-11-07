@@ -8,7 +8,7 @@ var config = {
 	database: 'pinakinathc',
 	host: 'db.imad.hasura-app.io',
 	port: '5432',
-	password: 'db-pinakinathc-68397'
+	password: 'db-pinakinathc-68397'// please use some environment variables here instead of using the password here dure to security reasons. I have added this password here as there is not much security resason. Please do not affect the database using these crediantials.
 };
 
 var app = express();
